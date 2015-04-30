@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
   root to: "selling#index"
   get "selling" => "selling#index"
+  get "/" => "selling#index"
 end

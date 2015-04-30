@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require skrollr
-//= require_tree .
+//= require_tree ./plugins
+//= require selling

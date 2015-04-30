@@ -1,5 +1,41 @@
-<div data-0="background-color:rgb(0,0,255);transform[bounce]:rotate(0deg);"
-     data-500="background-color:rgb(255,0,0);transform[bounce]:rotate(0deg);" style="height: 100%">WOOOT</div>
-
-<div data-500="background-color:rgba(0,0,0,0.5);transform[bounce]:rotate(0deg);opaticy: 0.5"
-     data-1000="background-color:rgba(0,0,0,1);transform[bounce]:rotate(0deg);opaticy: 0.5" style="height: 500px">WOOOT</div>
+<ul id="menu">
+    <li data-menuanchor="firstPage"><a href="#firstPage">First section</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+    <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+    <li data-menuanchor="lastPage"><a href="#fourthPage">Fourth section</a></li>
+</ul>
+<div id="fullpage">
+  <div class="section">
+    <h1>The Ultimate Guide to Flowers</h1>
+    <p>lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom .</p>
+    <p>lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom .</p>
+    <p>lorem epsom lorem epsom lorem epsom lorem epsom .</p>
+    <span class=""></span>
+  </div>
+  <div class="section">
+    <%= video_tag(["flora1.webm", "flora1.mp4"], poster: "flora1.png", loop: true, id: "flora_video") %>
+  </div>
+  <div class="section">
+    <div class="slide" data-anchor="slide1">
+      <%= image_tag("flora02.png") %>
+    </div>
+    <div class="slide" data-anchor="slide2">
+      <%= image_tag("flora03.png") %>
+    </div>
+    <div class="slide" data-anchor="slide3">
+      <%= image_tag("flora04.png") %>
+    </div>
+    <div class="slide" data-anchor="slide4">
+      <%= image_tag("flora05.png") %>
+    </div>
+  </div>
+  <div class="section">
+    <div class="slide" data-anchor="slide4">
+    <form class="form-inline">
+      <input type="email" placeholder="Email" class="form-control" />
+      <input type="text" placeholder="Postcode" class="form-control"/>
+      <button class="btn btn-primary" type="submit">Get!</button>
+    </form>
+    </div>
+  </div>
+</div>

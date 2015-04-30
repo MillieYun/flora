@@ -4,6 +4,9 @@
   <title>Flora</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <!--[if lt IE 9]>
+  <%= javascript_include_tag 'ie' %>
+  <![endif]-->
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= "#{controller_name} #{action_name}" %>'>
