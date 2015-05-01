@@ -1,0 +1,50 @@
+$ ->
+  afterLoadFn = (anchorLink, index) ->
+    $activeSection = $(@)
+    if index is 2
+      $activeSection.find('video').get(0).play()
+    else
+      $('video').get(0).pause()
+
+  convertMetersToMiles = (meters) ->
+    meters / 1000 * 0.6214    
+
+  showCongratsMsg = ->
+    $(".congrats").addClass('completed')
+      
+    # .removeClass("hide").addClass("show")
+    # alert('yeah')
+
+  afterSlideLoadFn = (anchorLink, index, slideAnchor, slideIndex) ->
+
+  callback = (response, status) ->
+    distance = convertMetersToMiles(response.rows[0].elements[0].distance.value) 
+    if status is 'OK' and distance < 5
+      showCongratsMsg()
+
+  distanceCalculation = (destination) ->
+    origin = new (google.maps.LatLng)(51.493465, -0.226349)
+    destination ||= 'W6 9JG'
+    service = new (google.maps.DistanceMatrixService)
+    service.getDistanceMatrix {
+      origins: [ origin ]
+      destinations: [ destination ]
+      travelMode: google.maps.TravelMode.DRIVING
+      avoidHighways: false
+      avoidTolls: false
+      unitSystem: google.maps.UnitSystem.IMPERIAL
+    }, callback
+
+
+  $('#fullpage').fullpage
+    anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+    menu: '#menu'
+    afterLoad: afterLoadFn
+    afterSlideLoad: afterSlideLoadFn
+
+  $("input[name*=postcode]").on 'blur', ->
+    if $(@).data('is-validated')
+      distanceCalculation $(@).val()
+
+# http://maps.googleapis.com/maps/api/js?key=AIzaSyAmI5IBTaXLT-8wS8ToNhOYkGb2ocZ795o
+# start 51.6580074,-0.4107954

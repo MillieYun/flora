@@ -29,5 +29,6 @@ module Flora
     config.assets.paths << "#{Rails.root}/app/assets/medias"
     config.assets.enabled = true
     config.serve_static_assets = true
+    config.assets.initialize_on_precompile = false
   end
 end
