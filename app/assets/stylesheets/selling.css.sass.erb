@@ -1,0 +1,139 @@
+$bg: #D77F7D
+$white: rgba(255,255,255,1)
+$black: rgba(0,0,0,1)
+$font-color: #666
+
+*
+  font-family: 'Lato', Arial
+  text-align: center
+  color: #fff
+  font-size: 14px
+  margin: 0
+  padding: 0
+  outline: none
+  cursor: default
+
+html, body
+  height: 100%
+
+a
+  text-decoration: none
+  cursor: pointer
+
+.text-danger .invalid
+  color: $bg
+
+input.form-control:focus
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(83, 176, 94, 0.3)
+  border-color: rgba(83, 176, 94, 0.8)
+input.form-control.error
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(215, 127, 125, 0.3)
+  border-color: rgba(215, 127, 125, 0.8)
+  &:focus
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(215, 127, 125, 0.3)
+    border-color: rgba(215, 127, 125, 0.8)
+
+ul#menu
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 2
+  margin: 0
+  width: 100%
+  background: transparent
+  transition: 0.5s ease
+  &:hover
+    background: rgba(255,255,255,0.2)
+  li
+    list-style: none
+    float: left
+    &:not(:nth-of-type(1))
+      margin-left: 1em
+    a
+      color: #fff
+      padding: 1em
+      transition: 0.5s ease
+      border: 1px solid transparent
+      display: block
+      &:hover
+        background: rgba(0,0,0,0.1)
+        border-bottom: 3px solid $white
+    &.active a
+      border-bottom: 3px solid $white
+
+#fullpage
+  z-index: 1
+  .section
+    position: relative
+    background-size: cover
+    background: no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    &:nth-of-type(1)
+      background-image: asset-url("bg.png")
+    &:nth-of-type(2)
+      background: $bg
+    &:nth-of-type(3)
+      background: $bg
+    &:nth-of-type(4)
+      background-image: asset-url("bg.png")
+    h1
+      +title-shadow()
+      font-family: 'Pacifico', cursive
+      transition: 0.2s ease
+      cursor: default
+    p
+      color: $font-color
+#form
+  .form-component
+    width: 50%
+    max-width: 500px
+    margin: 0 auto
+    padding: 1em
+    margin-bottom: 1em
+    border-radius: 3px
+    label
+      color: $font-color
+    &.form-input
+      +panel-bg()
+    &.error.form-input input
+      @extend input.form-control.error
+    &.form-button
+      .btn-primary
+        background-color: darken($bg, 20%)
+        border: 1px solid darken($bg, 30%)
+        &:hover
+          background-color: $bg
+          border: 1px solid darken($bg, 10%)
+.congrats
+  position: absolute
+  width: 60%
+  max-height: 0
+  overflow: hidden
+  border-radius: 3px
+  margin: auto
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  transition: all 2s ease
+
+.completed
+  max-height: 80%
+
+
+video
+  display: block
+
+video#flora_video
+  position: absolute
+  right: 0
+  top: 0
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  background: url(flora1.png) no-repeat
+  background-size: cover
