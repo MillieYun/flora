@@ -97,6 +97,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.6.1)
     multi_json (1.11.0)
+    pg (0.18.1)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -123,6 +124,11 @@ GEM
       activesupport (>= 3.2)
       choice (~> 0.1.6)
       ruby-graphviz (~> 1.0.4)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.3)
     railties (4.1.4)
       actionpack (= 4.1.4)
       activesupport (= 4.1.4)
@@ -187,10 +193,12 @@ DEPENDENCIES
   jquery-turbolinks
   jquery-ui-rails
   jquery-validation-rails
+  pg
   pry
   pry-byebug
   rails (= 4.1.4)
   rails-erd
+  rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

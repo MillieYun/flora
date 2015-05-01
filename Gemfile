@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 gem 'rails', '4.1.4'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'compass-rails'
 gem 'bootstrap-sass'#, '~> 3.3.3'
@@ -24,4 +23,10 @@ gem 'rails-erd'
 gem 'pry-byebug'
 gem 'chosen-rails', '1.2.0'
 gem 'bootstrap_form'
-gem 'font-awesome-rails'
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
