@@ -5,50 +5,8 @@
     <li data-menuanchor="lastPage"><a href="#lastPage">Last section</a></li>
 </ul>
 <div id="fullpage">
-  <div class="section">
-    <h1>The Ultimate Guide to Flowers</h1>
-    <p>lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom .</p>
-    <p>lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom lorem epsom .</p>
-    <p>lorem epsom lorem epsom lorem epsom lorem epsom .</p>
-    <span class=""></span>
-  </div>
-  <div class="section">
-    <%= video_tag(["flora1.webm", "flora1.mp4"], poster: "flora1.png", loop: true, id: "flora_video") %>
-  </div>
-  <div class="section">
-    <div class="slide" data-anchor="slide1">
-      <%= image_tag("flora02.png") %>
-    </div>
-    <div class="slide" data-anchor="slide2">
-      <%= image_tag("flora03.png") %>
-    </div>
-    <div class="slide" data-anchor="slide3">
-      <%= image_tag("flora04.png") %>
-    </div>
-    <div class="slide" data-anchor="slide4">
-      <%= image_tag("flora05.png") %>
-    </div>
-  </div>
-  <div class="section">
-    <h1>Get you free eBook!</h1>
-    <form id="form">
-      <div class="form-component form-input">
-        <label for="email">Please input your email</label>
-        <input type="email" placeholder="Email" class="form-control" id="email" required />
-      </div>
-      <div class="form-component form-input">
-        <label for="postcode">Please input your postcoe</label>
-        <input type="text" placeholder="Postcode" class="form-control" id="postcode" name="postcode" required/>
-      </div>
-      <div class="form-component form-button">
-        <button class="btn btn-primary" type="submit">Get!</button>
-      </div>
-    </form>
-    <div class="congrats">
-      <%#= image_tag("flora02.png") %>
-      <div><%= image_tag("flora03.png") %></div>
-      
-      <%#= image_tag("flora04.png") %>
-    </div>
-  </div>
+  <%= render 'entry_page' %>
+  <%= render 'video_instruction' %>
+  <%= render 'slide_show' %>
+  <%= render 'form' %>
 </div>

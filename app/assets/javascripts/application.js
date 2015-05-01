@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require d3
+//= require jquery.fullPage
+//= require jquery.easings.min
+//= require jquery.slimscroll
+//= require postcode_auto_format
 //= require turbolinks
 //= require skrollr
-//= require_tree ./plugins
 //= require selling

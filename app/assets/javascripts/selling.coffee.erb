@@ -7,18 +7,18 @@ $ ->
       $('video').get(0).pause()
 
   convertMetersToMiles = (meters) ->
-    meters / 1000 * 0.6214    
+    meters / 1000 * 0.6214
 
   showCongratsMsg = ->
     $(".congrats").addClass('completed')
-      
+
     # .removeClass("hide").addClass("show")
     # alert('yeah')
 
   afterSlideLoadFn = (anchorLink, index, slideAnchor, slideIndex) ->
 
   callback = (response, status) ->
-    distance = convertMetersToMiles(response.rows[0].elements[0].distance.value) 
+    distance = convertMetersToMiles(response.rows[0].elements[0].distance.value)
     if status is 'OK' and distance < 5
       showCongratsMsg()
 
@@ -37,7 +37,7 @@ $ ->
 
 
   $('#fullpage').fullpage
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+    anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
     menu: '#menu'
     afterLoad: afterLoadFn
     afterSlideLoad: afterSlideLoadFn
