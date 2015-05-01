@@ -23,10 +23,6 @@ gem 'rails-erd'
 gem 'pry-byebug'
 gem 'chosen-rails', '1.2.0'
 gem 'bootstrap_form'
-group :development do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'rails_12factor'
-  gem 'pg'
-end
+gem 'sqlite3', group: :development
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
