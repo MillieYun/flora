@@ -2,7 +2,7 @@
     <li data-menuanchor="firstPage"><a href="#firstPage">First section</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
     <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-    <li data-menuanchor="lastPage"><a href="#fourthPage">Fourth section</a></li>
+    <li data-menuanchor="lastPage"><a href="#lastPage">Last section</a></li>
 </ul>
 <div id="fullpage">
   <div class="section">
@@ -30,12 +30,25 @@
     </div>
   </div>
   <div class="section">
-    <div class="slide" data-anchor="slide4">
-    <form class="form-inline">
-      <input type="email" placeholder="Email" class="form-control" />
-      <input type="text" placeholder="Postcode" class="form-control"/>
-      <button class="btn btn-primary" type="submit">Get!</button>
+    <h1>Get you free eBook!</h1>
+    <form id="form">
+      <div class="form-component form-input">
+        <label for="email">Please input your email</label>
+        <input type="email" placeholder="Email" class="form-control" id="email" required />
+      </div>
+      <div class="form-component form-input">
+        <label for="postcode">Please input your postcoe</label>
+        <input type="text" placeholder="Postcode" class="form-control" id="postcode" name="postcode" required/>
+      </div>
+      <div class="form-component form-button">
+        <button class="btn btn-primary" type="submit">Get!</button>
+      </div>
     </form>
+    <div class="congrats">
+      <%#= image_tag("flora02.png") %>
+      <div><%= image_tag("flora03.png") %></div>
+      
+      <%#= image_tag("flora04.png") %>
     </div>
   </div>
 </div>
