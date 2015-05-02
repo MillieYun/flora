@@ -20,4 +20,5 @@
 //= require postcode_auto_format
 //= require turbolinks
 //= require skrollr
+//= require turn
 //= require selling
