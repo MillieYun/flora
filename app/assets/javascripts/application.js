@@ -21,4 +21,5 @@
 //= require turbolinks
 //= require skrollr
 //= require turn
+//= require ebook
 //= require selling
